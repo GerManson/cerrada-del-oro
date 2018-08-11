@@ -37,6 +37,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'haml'
 gem 'haml-rails', '~> 1.0'
 
+# Material Design HTML/CSS Framework
+# gem 'material_design_lite-rails', '~> 1.3'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
