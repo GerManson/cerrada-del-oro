@@ -54,9 +54,7 @@ html, body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.mdl-app .mdl-card > * {
-  height: auto;
-}
+
 .mdl-app .mdl-card .mdl-card__supporting-text {
   margin: 40px;
   -webkit-flex-grow: 1;
@@ -229,4 +227,16 @@ html, body {
 }
 .mdl-app .mdl-menu__container {
   z-index: 99;
+}
+
+h2.page-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+img.top-logo {
+  height: 60px;
+  margin-bottom: 60px;
 }

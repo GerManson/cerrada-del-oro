@@ -2,7 +2,7 @@
 %html{:lang => "es"}
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-    %meta{content: 'width=device-width, initial-scale=1.0, minium-scale=1.0', name: 'viewport'}
+    %meta{content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0', name: 'viewport'}
     %title Cerrada del Oro
 
     = csrf_meta_tags
@@ -24,13 +24,12 @@
         // Title
         .mdl-layout--large-screen-only.mdl-layout__header-row
         .mdl-layout--large-screen-only.mdl-layout__header-row
-          %h3 Cerrada del Oro
-        .mdl-layout--large-screen-only.mdl-layout__header-row
+          = image_tag "cerrada-del-oro-white.png", class: 'top-logo'
 
         // Tabs
         .mdl-layout__tab-bar.mdl-js-ripple-effect.mdl-color--primary-dark
-          %a.mdl-layout__tab.is-active{ href:"#" } Inicio
-          %a.mdl-layout__tab{ href:"#" } Reportes
+          = link_to "Inicio", root_path, class: active_tab?(root_path)
+          = link_to "Reportes", reports_path, class: active_tab?(reports_path)
 
       %main.mdl-layout__content
         .mdl-layout__tab-panel.is-active
@@ -38,12 +37,12 @@
 
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
-          .mdl-logo Cerrada del Oro 2018
+          .mdl-logo Cerrada del Oro
           %ul.mdl-mini-footer__link-list
             %li
-              %a{href: "#"} Inicio
+              = link_to "Inicio", root_path
             %li
-              %a{href: "#"} Inicio
+              = link_to "Reportes", reports_path
 
     = javascript_include_tag 'application'
     = yield :javascript

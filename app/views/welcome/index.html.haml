@@ -1,0 +1,13 @@
+%section.section--center.mdl-grid.mdl-grid--no-spacing
+  %h2.page-title Bienvenido
+
+%section.section--center.mdl-grid.mdl-grid--no-spacing
+  .welcome-card-wide.mdl-card.mdl-shadow--2dp
+    .mdl-card__title
+      %h2.mdl-card__title-text Cerrada del Oro
+
+    .mdl-card__supporting-text
+      Aqui podras consultar los reportes de gastos del comite de vecinos.
+
+    .mdl-card__actions.mdl-card--border
+      = link_to "Ver Reportes", reports_path, class: "mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
