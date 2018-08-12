@@ -42,14 +42,5 @@
         .mdl-layout__tab-panel.is-active
           = yield
 
-      %footer.mdl-mini-footer
-        .mdl-mini-footer__left-section
-          .mdl-logo Cerrada del Oro
-          %ul.mdl-mini-footer__link-list
-            %li
-              = link_to "Inicio", root_path
-            %li
-              = link_to "Reportes", reports_path
-
     = javascript_include_tag 'application'
     = yield :javascript
