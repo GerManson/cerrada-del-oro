@@ -16,9 +16,7 @@ html, body {
 .mdl-app .mdl-layout__tab-bar-button {
   display: none;
 }
-.mdl-app .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {
-  display: none;
-}
+
 .mdl-app .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,
 .mdl-app .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {
   overflow: visible;
@@ -284,4 +282,8 @@ img.top-logo {
 
 .alert li {
   list-style: none;
+}
+
+.mdl-menu__container.is-visible {
+  top: 0 !important;
 }
