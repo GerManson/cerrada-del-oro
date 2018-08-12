@@ -31,6 +31,13 @@
           = link_to "Inicio", root_path, class: active_tab?(root_path)
           = link_to "Reportes", reports_path, class: active_tab?(reports_path)
 
+          %button#logout.mdl-button.mdl-js-button.mdl-button--icon.logout
+            %i.material-icons more_vert
+
+          %ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect{ for: "logout" }
+            %li.mdl-menu__item
+              = link_to "Cerrar Sesión", destroy_user_session_path, method: :delete
+
       %main.mdl-layout__content
         .mdl-layout__tab-panel.is-active
           = yield
