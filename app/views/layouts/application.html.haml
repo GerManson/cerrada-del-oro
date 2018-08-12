@@ -34,13 +34,14 @@
           %button#logout.mdl-button.mdl-js-button.mdl-button--icon.logout
             %i.material-icons more_vert
 
-          %ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect{ for: "logout" }
-            %li.mdl-menu__item
-              = link_to "Cerrar Sesión", destroy_user_session_path, method: :delete
-
       %main.mdl-layout__content
+        %ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect{ for: "logout" }
+          %li.mdl-menu__item
+            = link_to "Cerrar Sesión", destroy_user_session_path, method: :delete
+
         .mdl-layout__tab-panel.is-active
           = yield
+
 
     = javascript_include_tag 'application'
     = yield :javascript
