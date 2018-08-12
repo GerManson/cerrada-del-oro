@@ -43,7 +43,7 @@ html, body {
 }
 .mdl-app main > .mdl-layout__tab-panel {
   padding: 8px;
-  padding-top: 48px;
+  padding-top: 20px;
 }
 .mdl-app .mdl-card {
   height: auto;
@@ -93,13 +93,13 @@ html, body {
 }
 
 .mdl-app .mdl-layout__content {
-  min-height: 1000px;
+  min-height: 400px;
   background-color: #f5f5f5
 }
 
 .mdl-app .mdl-layout__content section:not(:last-of-type) {
   position: relative;
-  margin-bottom: 48px;
+  margin-bottom: 20px;
 }
 
 .mdl-app section.section--center {
@@ -237,6 +237,51 @@ h2.page-title {
 }
 
 img.top-logo {
-  height: 60px;
+  height: 70px;
   margin-bottom: 60px;
+}
+
+.auth-card-wide.mdl-card {
+  width: 100%;
+}
+
+.auth-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 170px;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.auth-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+.mdl-button.logout {
+  position: absolute;
+  right: 0;
+  top: 14px;
+}
+
+.mdl-menu.mdl-menu--bottom-right a {
+  color: #616161;
+  text-decoration: none;
+}
+
+.alert {
+  padding: 10px;
+  padding-left: 30px;
+  width: 100%;
+
+  border-radius: 3px;
+}
+
+.alert.alert-error {
+  background-color: #fff1f0;
+  color: #c80201;
+}
+
+.alert li {
+  list-style: none;
 }
