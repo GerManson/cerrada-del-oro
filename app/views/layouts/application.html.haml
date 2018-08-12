@@ -28,8 +28,8 @@
 
         // Tabs
         .mdl-layout__tab-bar.mdl-js-ripple-effect.mdl-color--primary-dark
-          = link_to "Inicio", root_path, class: active_tab?(root_path)
-          = link_to "Reportes", reports_path, class: active_tab?(reports_path)
+          -# = link_to "Inicio", root_path, class: active_tab?(root_path)
+          = link_to "Reportes", root_path, class: active_tab?(reports_path)
 
           %button#logout.mdl-button.mdl-js-button.mdl-button--icon.logout
             %i.material-icons more_vert
