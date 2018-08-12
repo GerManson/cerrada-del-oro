@@ -1,10 +1,28 @@
-%h2 Forgot your password?
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .actions
-    = f.submit "Send me reset password instructions"
-= render "devise/shared/links"
+%section.section--center.mdl-grid.mdl-grid--no-spacing
+  .auth-card-wide.mdl-card.mdl-shadow--2dp
+    .mdl-card__title
+      = image_tag "cerrada-del-oro-white.png", class: 'top-logo'
+    .mdl-card__supporting-text
+      .mdl-grid
+        .mdl-cell.mdl-cell--12-col
+          %h2.page-title ¿Olvidaste tu contraseña?
+          %p Te enviaremos un enlace a tu correo electrónico con las instrucciones para resetear tu contraseña.
+
+          .notice= notice if notice
+          .notice= alert if alert
+          = devise_error_messages!
+
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        = f.hidden_field :reset_password_token
+        .mdl-grid
+          .mdl-cell.mdl-cell--12-col
+            .mdl-textfield.mdl-js-textfield
+              = f.email_field :email, autofocus: true, autocomplete: "email", class: "mdl-textfield__input"
+              = f.label :email, "Correo Electrónico", class: "mdl-textfield__label"
+
+        .mdl-grid
+          .mdl-cell.mdl-cell--12-col
+            = f.submit "Enviar Enlace", class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+
+    .mdl-card__actions.mdl-card--border
+      = render "devise/shared/links"

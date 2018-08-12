@@ -257,3 +257,21 @@ img.top-logo {
 .auth-card-wide > .mdl-card__menu {
   color: #fff;
 }
+
+
+.alert {
+  padding: 10px;
+  padding-left: 30px;
+  width: 100%;
+
+  border-radius: 3px;
+}
+
+.alert.alert-error {
+  background-color: #fff1f0;
+  color: #c80201;
+}
+
+.alert li {
+  list-style: none;
+}
