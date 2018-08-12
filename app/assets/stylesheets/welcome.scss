@@ -1,3 +1,16 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.welcome-card-wide.mdl-card {
+  width: 100%;
+}
+
+.welcome-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url(#{image_path('welcome.jpg')}) center / cover;
+}
+.welcome-card-wide > .mdl-card__menu {
+  color: #fff;
+}
